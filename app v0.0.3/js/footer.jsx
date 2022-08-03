@@ -12,7 +12,7 @@ var app = app || {};
 		render: function () {
 			var activeTodoWord = app.Utils.pluralize(this.props.count, 'item');
 			var clearButton = null;
-
+/*
 			if (this.props.completedCount > 0) {
 				clearButton = (
 					<button
@@ -22,7 +22,7 @@ var app = app || {};
 					</button>
 				);
 			}
-
+*/
 			// React idiom for shortcutting to `classSet` since it'll be used often
 			var cx = React.addons.classSet;
 			var nowShowing = this.props.nowShowing;
