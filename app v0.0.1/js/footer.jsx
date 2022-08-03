@@ -42,7 +42,7 @@ var app = app || {};
 						{' '}
 						<li>
 							<a
-								href="#/active"
+								href="#/active" data-test={"filter-activeTodos"}
 								className={cx({selected: nowShowing === app.ACTIVE_TODOS})}>
 									Active
 							</a>
