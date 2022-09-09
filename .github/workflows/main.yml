@@ -39,6 +39,6 @@ jobs:
       - name: Run E2E tests
         uses: cypress-io/github-action@v4
         with:
-          start: "npm run test-ci"
+          start: "cd test-framework & npm run test-ci"
           wait-on: "http://localhost:8888"
           config: baseUrl=http://localhost:8888
