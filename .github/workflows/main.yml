@@ -23,7 +23,7 @@ on:
         type: boolean
 
 jobs:
-  app-run:
+  app-build-and-run:
     runs-on: windows-latest
 
     steps:
@@ -39,15 +39,17 @@ jobs:
         run: npm run start
         working-directory: app-version-one
 
-  cypress-run:
+  framework-install-and-start:
     runs-on: windows-latest
     steps:
       - name: Run E2E tests
-        uses: cypress-io/github-action@v4
-        with:
-          start: "npm run cyopen"
-          wait-on: "http://localhost:8887"
-          config: baseUrl=http://localhost:8887
+        run: npm install
+        working-directory: test-framework
+        # uses: cypress-io/github-action@v4
+        # with:
+        #   start: "npm run cyopen"
+        #   wait-on: "http://localhost:8887"
+        #   config: baseUrl=http://localhost:8887
       # - name: Run E2E tests
       #   run: |
       #     cd..
