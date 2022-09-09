@@ -3,3 +3,4 @@ cypress/screenshots
 cypress/videos
 .vuepress
 .DS_Store
+package-lock.json
