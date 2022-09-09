@@ -4,6 +4,7 @@
   "description": "Training project: \"Automation practice\"",
   "main": "index.js",
   "scripts": {
+    "build": "",
     "dev": "start-test 8888 cypress:open"
   },
   "repository": {
