@@ -43,8 +43,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Run E2E tests
-        run: npm install
-        working-directory: test-framework
+        run: Get-ChildItem
+
         # uses: cypress-io/github-action@v4
         # with:
         #   start: "npm run cyopen"
