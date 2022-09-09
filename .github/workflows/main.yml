@@ -45,6 +45,10 @@ jobs:
       - name: Build Test framework
         run: |
           cd..
+          cd test-framework
           npm install
       - name: Run E2E tests
-        run: npm run cyrun
+        run: |
+          cd..
+          cd test-framework
+          npm run cyrun
