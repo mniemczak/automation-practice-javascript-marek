@@ -10,6 +10,7 @@ var app = app || {};
 
 	app.TodoFooter = React.createClass({
 		render: function () {
+      this.props.count--;
 			var activeTodoWord = app.Utils.pluralize(this.props.count, 'item');
 			var clearButton = null;
 
