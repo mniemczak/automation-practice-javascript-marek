@@ -2,14 +2,14 @@
 
 ## Pierwsza wersja
 
-* najlepszy stan aplikacji
+* Najlepszy stan aplikacji
 
 ## Druga wersja
 
-* nie działa oznaczenie zaznaczenia dla przycisku "Active".
+* Nie działa oznaczenie zaznaczenia dla przycisku "Active".
 Nie pojawia się szara ramka.
 
-* nie działa zaznaczenie "completed" dla dodanego todo.
+* Nie działa zaznaczenie "completed" dla dodanego todo.
 Pomimo jego oznaczenia po przejściu pomiędzy filtrami "All", "Active", "Completed" pozycja zaznaczona wraca do poprzedniego stanu
 
 ## Trzecia wersja
