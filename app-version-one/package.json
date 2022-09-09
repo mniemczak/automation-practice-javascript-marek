@@ -4,7 +4,7 @@
   "version": "0.0.0-development",
   "description": "Cypress tests demo app",
   "scripts": {
-    "start": "http-server -p 8888 -c-1"
+    "start": "http-server -p 8887 -c-1"
   },
   "dependencies": {
     "director": "1.2.8",
