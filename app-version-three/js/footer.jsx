@@ -12,6 +12,8 @@ var app = app || {};
 		render: function () {
 			var activeTodoWord = app.Utils.pluralize(this.props.count, 'item');
 			var clearButton = null;
+
+			//TODO
 /*
 			if (this.props.completedCount > 0) {
 				clearButton = (

@@ -1,0 +1,17 @@
+# BUGS
+
+## Pierwsza wersja
+
+* najlepszy stan aplikacji
+
+## Druga wersja
+
+* nie działa oznaczenie zaznaczenia dla przycisku "Active".
+Nie pojawia się szara ramka.
+
+* nie działa zaznaczenie "completed" dla dodanego todo.
+Pomimo jego oznaczenia po przejściu pomiędzy filtrami "All", "Active", "Completed" pozycja zaznaczona wraca do poprzedniego stanu
+
+## Trzecia wersja
+
+Brak funkcjonalności: "Clear completed"
