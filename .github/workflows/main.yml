@@ -48,7 +48,6 @@ jobs:
           start: "npm run cyopen"
           wait-on: "http://localhost:8887"
           config: baseUrl=http://localhost:8887
-          working-directory: test-framework
       # - name: Run E2E tests
       #   run: |
       #     cd..
