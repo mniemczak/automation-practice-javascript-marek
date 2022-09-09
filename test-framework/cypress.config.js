@@ -35,7 +35,7 @@ module.exports = defineConfig({
 	watchForFileChanges: false,
 	e2e: {
 		setupNodeEvents(on, config) {},
-		baseUrl: 'https://example.com',
+		baseUrl: 'https://testerzy.pl/',
 		excludeSpecPattern: '*.hot-update.js',
 		specPattern: 'cypress/tests/**/*.{js,jsx,ts,tsx}',
 		supportFile: './cypress/support/support.js',
