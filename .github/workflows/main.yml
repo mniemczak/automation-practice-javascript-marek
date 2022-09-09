@@ -37,9 +37,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Build
-        uses: cypress-io/github-action@v4
       - run: npm install
         working-directory: app-version-one
+        uses: cypress-io/github-action@v4
 
 
 
