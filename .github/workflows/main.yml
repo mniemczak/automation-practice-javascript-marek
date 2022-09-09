@@ -44,4 +44,4 @@ jobs:
     steps:
       - name: Build test framework
         run: npm install
-        working-directory: test-framework
+        working-directory: ../test-framework
