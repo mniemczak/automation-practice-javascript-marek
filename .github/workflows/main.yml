@@ -42,6 +42,9 @@ jobs:
   cypress-run:
     runs-on: windows-latest
     steps:
-      - name: Build test framework
+      - name: Build Test framework
         run: npm install
-        working-directory: ../test-framework
+        working-directory: test-framework
+      - name: Run E2E tests
+        run: npm run cyrun
+        working-directory: test-framework
