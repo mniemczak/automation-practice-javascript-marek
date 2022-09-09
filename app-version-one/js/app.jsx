@@ -135,7 +135,7 @@ var app = app || {};
 							onChange={this.toggleAll}
 							checked={activeTodoCount === 0}
 						/>
-						<ul className="todo-list">
+						<ul className="todo-list" data-test={"todo-list"}>
 							{todoItems}
 						</ul>
 					</section>
