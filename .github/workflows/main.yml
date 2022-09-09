@@ -4,25 +4,23 @@ name: automation-practice
 on:
   push:
     branches:
-      - main 
+      - main
 
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'Log level'     
+        description: "Log level"
         required: true
-        default: 'warning' 
+        default: "warning"
         type: choice
         options:
-        - info
-        - warning
-        - debug 
+          - info
+          - warning
+          - debug
       tags:
-        description: 'Test scenario tags'
-        required: false 
+        description: "Test scenario tags"
+        required: false
         type: boolean
-
-
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,19 +31,22 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16.x'
-    - name: Install dependencies
-      run: npm install
-      working-directory: app-version-one
-    - name: Run app one
-      run: npm run start
-      working-directory: app-version-one
-
-
-
-
-
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+      - name: Install dependencies
+        run: npm install
+        working-directory: app-version-one
+      - name: Run app one
+        run: npm run start
+        working-directory: app-version-one\
+      - name: Build Test framework
+        run: npm install
+      - name: Run E2E tests
+        uses: cypress-io/github-action@v4
+        with:
+          start: "npm run start-ci"
+          wait-on: "http://localhost:8888"
+          config: baseUrl=http://localhost:8888
