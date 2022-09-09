@@ -39,7 +39,6 @@ jobs:
       - name: Build
       - run: npm install
         working-directory: app-version-one
-        uses: cypress-io/github-action@v4
 
 
 
