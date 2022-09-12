@@ -45,7 +45,6 @@ jobs:
       - name: Run E2E tests
         run: |
           Get-ChildItem -Path D:\a\automation-practice\automation-practice
-          cd test-framework
           Get-ChildItem -Path D:\a\automation-practice\automation-practice\app-version-one
         # npm install
 
