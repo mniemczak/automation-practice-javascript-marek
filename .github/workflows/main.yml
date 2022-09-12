@@ -43,16 +43,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Run E2E tests
-        run: |
-          Get-ChildItem -Path D:\a\automation-practice\automation-practice
-          Get-ChildItem -Path D:\a\automation-practice\automation-practice\app-version-one
-        # npm install
+      - uses: cypress-io/github-action@v4
+        with:
+          start: "npm run cyopen"
+          wait-on: "http://localhost:8887"
+          config: baseUrl=http://localhost:8887
 
-        # uses: cypress-io/github-action@v4
-        # with:
-        #   start: "npm run cyopen"
-        #   wait-on: "http://localhost:8887"
-        #   config: baseUrl=http://localhost:8887
       # - name: Run E2E tests
       #   run: |
       #     cd..
