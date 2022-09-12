@@ -45,7 +45,9 @@ jobs:
       - name: Run E2E tests
         run: |
           Get-ChildItem -Path D:\a\automation-practice\automation-practice
-          npm install
+          cd test-framework
+          Get-ChildItem -Path D:\a\automation-practice\automation-practice\test-framework
+        # npm install
 
         # uses: cypress-io/github-action@v4
         # with:
