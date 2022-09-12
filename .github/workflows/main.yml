@@ -46,9 +46,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Run E2E tests
         run: |
+          cd test-framework
           npm install
           npm run test-ci
-        working-directory: test-framework
 
       # - name: Run E2E tests
       #   run: |
