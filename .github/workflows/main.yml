@@ -45,11 +45,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run E2E tests
-        uses: cypress-io/github-action@v4
-        with:
-          start: "npm run cyrun"
-          # wait-on: "http://localhost:8887"
-          config: baseUrl=http://172.19.208.1:8887
+        run: |
+          npm run cyrun
 
       # - name: Run E2E tests
       #   run: |
