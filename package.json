@@ -6,8 +6,8 @@
   "scripts": {
     "e2e": "cypress run -b chrome --e2e",
     "cyopen": "cypress open",
-    "start-dev": "http-server ../app-version-one -p 8887",
-    "start-ci": "http-server ../app-version-one -p 8887 -c-1 --silent",
+    "start-dev": "http-server ./app-version-one -p 8887",
+    "start-ci": "http-server ./app-version-one -p 8887 -c-1 --silent",
     "test-ci": "run-p  start-ci e2e"
   },
   "repository": {
