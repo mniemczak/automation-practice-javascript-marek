@@ -9,7 +9,7 @@
     "start-dev": "http-server ./app-version-one -p 8887",
     "start-ci": "http-server ./app-version-one -p 8887 -c-1 --silent",
     "serve": "serve ./app-version-one",
-    "test-ci": "run-p  start-ci e2e"
+    "test-ci": "run-p  serve e2e"
   },
   "repository": {
     "type": "git",
