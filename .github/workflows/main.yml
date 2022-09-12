@@ -42,8 +42,8 @@ jobs:
   framework-install-and-start:
     runs-on: windows-latest
     steps:
-      - name: Run E2E tests
       - uses: cypress-io/github-action@v4
+      - name: Run E2E tests
         with:
           start: "npm run cyopen"
           wait-on: "http://localhost:8887"
