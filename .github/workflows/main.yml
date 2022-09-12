@@ -47,6 +47,7 @@ jobs:
       - name: Run E2E tests
         run: |
           npm install
+          npm run cyopen
 
       # - name: Run E2E tests
       #   run: |
