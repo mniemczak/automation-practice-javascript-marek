@@ -46,7 +46,7 @@ jobs:
         run: |
           Get-ChildItem -Path D:\a\automation-practice\automation-practice
           cd test-framework
-          Get-ChildItem -Path D:\a\automation-practice\automation-practice\test-framework
+          Get-ChildItem -Path D:\a\automation-practice\automation-practice\app-version-one
         # npm install
 
         # uses: cypress-io/github-action@v4
