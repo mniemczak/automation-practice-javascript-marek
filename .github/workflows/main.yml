@@ -46,7 +46,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Run E2E tests
         run: |
-          npm run cyrun
+          npm install
 
       # - name: Run E2E tests
       #   run: |
