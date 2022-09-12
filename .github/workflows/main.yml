@@ -50,6 +50,7 @@ jobs:
           npm install
           Get-ChildItem
           npm run test-ci
+          Get-ChildItem
 
       # - name: Run E2E tests
       #   run: |

@@ -22,6 +22,7 @@ describe('TodoMVC - React', function () {
 		// http://localhost:8888 - env variable: 'appTwoUrl'
 		// http://localhost:8889 - env variable: 'appThreeUrl'
 		// https://on.cypress.io/api/visit
+		cy.wait(10000);
 		cy.visit(Cypress.env('appOneUrl'));
 	});
 
@@ -41,7 +42,6 @@ describe('TodoMVC - React', function () {
 			cy.get('.todo-list li').should('have.length', 2);
 		});
 	});
-
 
 	context('New Todo', function () {
 		// New commands used here:
