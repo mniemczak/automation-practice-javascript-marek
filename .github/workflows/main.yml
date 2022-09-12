@@ -42,12 +42,14 @@ jobs:
   framework-install-and-start:
     runs-on: windows-latest
     steps:
-      - uses: cypress-io/github-action@v4
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Run E2E tests
+        uses: cypress-io/github-action@v4
         with:
-          start: "npm run cyopen"
-          wait-on: "http://localhost:8887"
-          config: baseUrl=http://localhost:8887
+          start: "npm run cyrun"
+          wait-on: "http://localhost:8888"
+          config: baseUrl=http://localhost:8888
 
       # - name: Run E2E tests
       #   run: |
