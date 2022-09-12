@@ -43,7 +43,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Run E2E tests
-        run: Get-ChildItem -Path D:\a\automation-practice\automation-practice
+        run: |
+          Get-ChildItem -Path D:\a\automation-practice\
+        # npm install
 
         # uses: cypress-io/github-action@v4
         # with:
