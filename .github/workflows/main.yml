@@ -48,8 +48,8 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           start: "npm run cyrun"
-          wait-on: "http://localhost:8888"
-          config: baseUrl=http://localhost:8888
+          wait-on: "http://localhost:8887"
+          config: baseUrl=http://localhost:8887
 
       # - name: Run E2E tests
       #   run: |
