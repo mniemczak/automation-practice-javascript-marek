@@ -23,21 +23,21 @@ on:
         type: boolean
 
 jobs:
-  app-build-and-run:
-    runs-on: windows-latest
+  # app-build-and-run:
+  #   runs-on: windows-latest
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16.x"
-      - name: Install dependencies
-        run: npm install
-        working-directory: app-version-one
-      - name: Run app one
-        run: npm run start
-        working-directory: app-version-one
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: "16.x"
+  #     - name: Install dependencies
+  #       run: npm install
+  #       working-directory: app-version-one
+  #     - name: Run app one
+  #       run: npm run start
+  #       working-directory: app-version-one
 
   framework-install-and-start:
     runs-on: windows-latest
