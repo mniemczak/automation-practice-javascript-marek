@@ -12,7 +12,7 @@ jobs:
         run: npm install
         working-directory: app-version-one
       - name: Start server in the background
-        run: npm run start
+        run: npm run start &
 
       # Cypress has its own package.json in folder "e2e"
       - name: Install Cypress and run tests
