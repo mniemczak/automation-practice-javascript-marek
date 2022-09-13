@@ -3,7 +3,9 @@
   "name": "testerzy.pl-cypress-todomvc",
   "version": "0.0.0-development",
   "description": "Cypress tests demo app",
-  "scripts": {},
+  "scripts": {
+    "start": "set PORT=3000 && react-scripts start"
+  },
   "dependencies": {
     "director": "1.2.8",
     "react": "0.13.3",
