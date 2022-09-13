@@ -2,11 +2,13 @@ name: E2E
 on: push
 jobs:
   test-app-one:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@master
       - name: Install root dependencies
         uses: bahmutov/npm-install@v1
+        with:
+          working-directory: app-version-one
 
       - name: install app
         run: npm install
