@@ -4,7 +4,7 @@
   "version": "0.0.0-development",
   "description": "Cypress tests demo app",
   "scripts": {
-    "start": "http-server -c-1 -p 4700"
+    "start": "set PORT=3006 && react-scripts start"
   },
   "dependencies": {
     "director": "1.2.8",
