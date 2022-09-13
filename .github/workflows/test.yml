@@ -13,47 +13,51 @@ jobs:
         working-directory: app-version-one
       - name: Start server in the background
         run: npm start &
+        working-directory: app-version-one
 
       # Cypress has its own package.json in folder "e2e"
       - name: Install Cypress and run tests
         uses: cypress-io/github-action@v4
         with:
           working-directory: test-framework
+          browser: chrome
 
-  test-app-two:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Install root dependencies
-        uses: bahmutov/npm-install@v1
+  # test-app-two:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@master
+  #     - name: Install root dependencies
+  #       uses: bahmutov/npm-install@v1
 
-      - name: install app
-        run: npm install
-        working-directory: app-version-two
-      - name: Start server in the background
-        run: npm start &
+  #     - name: install app
+  #       run: npm install
+  #       working-directory: app-version-two
+  #     - name: Start server in the background
+  #       run: npm start &
 
-      # Cypress has its own package.json in folder "e2e"
-      - name: Install Cypress and run tests
-        uses: cypress-io/github-action@v4
-        with:
-          working-directory: test-framework
+  #     # Cypress has its own package.json in folder "e2e"
+  #     - name: Install Cypress and run tests
+  #       uses: cypress-io/github-action@v4
+  #       with:
+  #         working-directory: test-framework
+  #         browser: chrome
 
-  test-app-three:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Install root dependencies
-        uses: bahmutov/npm-install@v1
+  # test-app-three:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@master
+  #     - name: Install root dependencies
+  #       uses: bahmutov/npm-install@v1
 
-      - name: install app
-        run: npm install
-        working-directory: app-version-three
-      - name: Start server in the background
-        run: npm start &
+  #     - name: install app
+  #       run: npm install
+  #       working-directory: app-version-three
+  #     - name: Start server in the background
+  #       run: npm start &
 
-      # Cypress has its own package.json in folder "e2e"
-      - name: Install Cypress and run tests
-        uses: cypress-io/github-action@v4
-        with:
-          working-directory: test-framework
+  #     # Cypress has its own package.json in folder "e2e"
+  #     - name: Install Cypress and run tests
+  #       uses: cypress-io/github-action@v4
+  #       with:
+  #         working-directory: test-framework
+  #         browser: chrome

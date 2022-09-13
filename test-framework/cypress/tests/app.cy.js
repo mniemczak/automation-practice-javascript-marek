@@ -22,7 +22,7 @@ describe('TodoMVC - React', function () {
 		// http://localhost:8888 - env variable: 'appTwoUrl'
 		// http://localhost:8889 - env variable: 'appThreeUrl'
 		// https://on.cypress.io/api/visit
-		cy.visit(Cypress.env('appOneUrl'));
+		cy.visit(Cypress.env('appUrl'));
 	});
 
 	afterEach(() => {
