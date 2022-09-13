@@ -37,7 +37,7 @@ jobs:
         run: npm start &
         working-directory: app-version-one
       - name: Install Cypress and run tests
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v1
         with:
           working-directory: test-framework
           browser: chrome
