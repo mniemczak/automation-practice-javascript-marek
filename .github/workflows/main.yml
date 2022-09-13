@@ -24,7 +24,6 @@ on:
         required: false
         type: boolean
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   test:
     runs-on: windows-latest
@@ -37,7 +36,6 @@ jobs:
       - name: Start server in the background
         run: npm start &
         working-directory: app-version-one
-      # Cypress has its own package.json in folder "e2e"
       - name: Install Cypress and run tests
         uses: cypress-io/github-action@v4
         with:

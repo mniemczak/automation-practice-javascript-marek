@@ -21,7 +21,7 @@ describe('TodoMVC - React', function () {
 		// which is automatically prepended to cy.visit
 		//
 		// https://on.cypress.io/api/visit
-		cy.visit('/');
+		cy.visit('http://localhost');
 	});
 
 	afterEach(() => {
