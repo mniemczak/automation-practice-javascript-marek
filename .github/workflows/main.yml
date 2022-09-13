@@ -34,10 +34,10 @@ jobs:
         with:
           working-directory: app-version-one
       - name: Start server in the background
-        run: npm start
+        run: npm run start &
         working-directory: app-version-one
       - name: Install Cypress and run tests
-        uses: cypress-io/github-action@v1
+        uses: cypress-io/github-action@v4
         with:
           working-directory: test-framework
           browser: chrome
