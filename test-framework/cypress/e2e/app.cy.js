@@ -44,7 +44,7 @@ describe('TodoMVC - React', function () {
 		// https://on.cypress.io/as
 
 		// a very simple example helpful during presentations
-		it('adds 2 todos', function () {
+		it.only('adds 2 todos', function () {
 			cy.get('.new-todo').type('learn testing{enter}').type('be cool{enter}');
 			cy.get('.todo-list li').should('have.length', 2);
 		});
@@ -82,7 +82,7 @@ describe('TodoMVC - React', function () {
 	});
 
 	context('Item', function () {
-		it.only('should allow me to edit an item', function () {
+		it('should allow me to edit an item', function () {
 			cy.get('.new-todo').type(TODO_ITEM_ONE).type('{enter}').as('todos');
 
 			cy.get('todo-list')
