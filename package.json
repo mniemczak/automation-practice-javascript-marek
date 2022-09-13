@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "prettier --write 'e2e/**/*.js'",
-    "start": "http-server -c-1 -p 4700 public"
+    "start-app-one": "http-server -c-1 -p 4700 app-version-one"
   },
   "repository": {
     "type": "git",
