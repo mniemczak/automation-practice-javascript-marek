@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
       - name: Start server in the background
-        run: npm start &
+        run: npm run start &
       - name: Install Cypress and run tests
         uses: cypress-io/github-action@v4
         with:
