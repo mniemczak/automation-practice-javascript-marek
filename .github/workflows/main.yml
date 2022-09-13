@@ -49,8 +49,10 @@ jobs:
           Get-ChildItem
           npm install
           Get-ChildItem
-          npm run test-ci
-          Get-ChildItem
+        uses: cypress-io/github-action@v4
+        with:
+          start: "npm run test-ci"
+          wait-on: "http://localhost:8887"
 
       # - name: Run E2E tests
       #   run: |
