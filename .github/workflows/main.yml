@@ -31,15 +31,11 @@ jobs:
       - uses: actions/checkout@master
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
-        with:
-          working-directory: app-version-one
       - name: Start server in the background
-        run: npm start--port=8080 &
-        working-directory: app-version-one
+        run: npm start &
       - name: Install Cypress and run tests
         uses: cypress-io/github-action@v4
         with:
-          wait-on: "http://localhost:8080"
           working-directory: test-framework
           browser: chrome
           headed: true
