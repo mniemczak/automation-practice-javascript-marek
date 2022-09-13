@@ -6,25 +6,23 @@ name: automation-practice
 on:
   push:
     branches:
-      - main 
+      - main
 
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'Log level'     
+        description: "Log level"
         required: true
-        default: 'warning' 
+        default: "warning"
         type: choice
         options:
-        - info
-        - warning
-        - debug 
+          - info
+          - warning
+          - debug
       tags:
-        description: 'Test scenario tags'
-        required: false 
+        description: "Test scenario tags"
+        required: false
         type: boolean
-
-
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -41,6 +39,6 @@ jobs:
       - name: Run E2E tests
         uses: cypress-io/github-action@v4
         with:
-          start: "npm run start-ci"
+          start: "npm run test-ci"
           wait-on: "http://localhost:8888"
           config: baseUrl=http://localhost:8888
