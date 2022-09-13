@@ -27,7 +27,7 @@ module.exports = defineConfig({
 	fixturesFolder: 'cypress/fixtures',
 	e2e: {
 		setupNodeEvents(on, config) {},
-		baseUrl: 'http://localhost:8888',
+		baseUrl: 'http://localhost',
 		excludeSpecPattern: 'testTest.spec.js',
 		specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
 		supportFile: './cypress/support/e2e.js',
