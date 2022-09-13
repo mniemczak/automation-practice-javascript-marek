@@ -1,7 +1,7 @@
 {
-  "name": "cypress-gh-action-subfolders",
+  "name": "",
   "version": "1.0.0",
-  "description": "Example using Cypress GitHub Action when Cypress is installed in a subfolder",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "lint": "prettier --write 'e2e/**/*.js'",
@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bahmutov/cypress-gh-action-subfolders.git"
+    "url": ""
   },
-  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bahmutov/cypress-gh-action-subfolders/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/bahmutov/cypress-gh-action-subfolders#readme",
+  "homepage": "",
   "devDependencies": {
     "prettier": "2.1.2"
   },
   "dependencies": {
-    "http-server": "0.12.3"
+    "http-server": "14.1.1"
   }
 }
