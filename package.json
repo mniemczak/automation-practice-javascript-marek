@@ -9,7 +9,7 @@
     "start": "http-server app -p 8888",
     "serve-start": "serve app",
     "test": "npm run start & cypress run --browser chrome",
-    "start-ci": "http-server app-version-one -p 8888 -c-1 --silent",
+    "start-ci": "http-server ./app-version-one -p 8888 -c-1 --silent",
     "test-ci": "run-p --race  start-ci e2e",
     "lint": "eslint --fix"
   },
