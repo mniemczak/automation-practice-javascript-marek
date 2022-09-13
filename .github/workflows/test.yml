@@ -8,6 +8,9 @@ jobs:
       - name: Install root dependencies
         uses: bahmutov/npm-install@v1
 
+      - name: install app
+        run: npm install
+        working-directory: app-version-one
       - name: Start server in the background
         run: npm start &
 
