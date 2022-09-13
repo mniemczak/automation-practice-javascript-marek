@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "This repo contains an example React App, with the tests written in Cypress",
   "scripts": {
-    "e2e": "cypress run --browser chrome",
+    "e2e": "cypress run --browser chrome --e2e",
     "cyopen": "cypress open",
     "start": "http-server app -p 8888",
     "serve-start": "serve app",
