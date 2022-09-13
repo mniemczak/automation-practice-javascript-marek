@@ -1,32 +1,20 @@
 {
   "private": true,
-  "name": "cypress-example-todomvc",
-  "version": "0.0.1",
-  "description": "This repo contains an example React App, with the tests written in Cypress",
+  "name": "testerzy.pl-cypress-todomvc",
+  "version": "0.0.0-development",
+  "description": "Cypress tests demo app",
   "scripts": {
-    "e2e": "cypress run --browser chrome",
-    "cyopen": "cypress open",
-    "start": "http-server app -p 8888",
-    "serve-start": "serve app",
-    "test": "npm run start & cypress run --browser chrome",
-    "start-ci": "http-server -p 8888 -c-1 --silent",
-    "test-ci": "run-p --race  start-ci e2e",
-    "lint": "eslint --fix"
+    "start": "http-server -p 8888 -c-1"
   },
   "dependencies": {
-    "alt": "^0.17.3",
     "director": "1.2.8",
-    "http-server": "14.1.1",
     "react": "0.13.3",
-    "serve": "14.0.1",
+    "http-server": "14.1.1",
     "todomvc-app-css": "2.4.2",
     "todomvc-common": "cypress-io/todomvc-common#88b7c6359ad4a5097312d8b2a21dd539ce9f4446"
   },
   "devDependencies": {
-    "cypress": "10.3.1",
-    "eslint": "^7.11.0",
-    "eslint-plugin-mocha": "10.0.5",
-    "mocha": "10.0.0",
-    "npm-run-all": "4.1.5"
+    "@types/node": "18.6.3",
+    "debug": "4.3.4"
   }
 }

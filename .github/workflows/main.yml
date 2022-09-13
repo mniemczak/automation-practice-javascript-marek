@@ -26,18 +26,21 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  cypress-run:
-    # The type of runner that the job will run on
+  test:
     runs-on: windows-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Run E2E tests
-        run: |
-          npm install
-          npm run test-ci
+      - uses: actions/checkout@master
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+        with:
+          working-directory: app-version-one
+      - name: Start server in the background
+        run: npm start &
         working-directory: app-version-one
+      # Cypress has its own package.json in folder "e2e"
+      - name: Install Cypress and run tests
+        uses: cypress-io/github-action@v4
+        with:
+          working-directory: test-framework
+          browser: chrome
+          headed: true

@@ -1,9 +1,6 @@
 // type definitions for Cypress object "cy"
 /// <reference types="cypress" />
 
-// type definitions for custom commands like "createDefaultTodos"
-/// <reference types="../support" />
-
 describe('TodoMVC - React', function () {
 	// setup these constants to match what TodoMVC does
 	let TODO_ITEM_ONE = 'buy some cheese';
@@ -85,11 +82,11 @@ describe('TodoMVC - React', function () {
 	});
 
 	context('Item', function () {
-		it('should allow me to edit an item', function () {
-			cy.createDefaultTodos().as('todos');
+		it.only('should allow me to edit an item', function () {
+			cy.get('.new-todo').type(TODO_ITEM_ONE).type('{enter}').as('todos');
 
-			cy.get('@todos')
-				.eq(1)
+			cy.get('todo-list')
+				.eq(0)
 				.as('secondTodo')
 				// TODO: fix this, dblclick should
 				// have been issued to label
