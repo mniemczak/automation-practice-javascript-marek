@@ -3,14 +3,7 @@
   "name": "cypress-example-todomvc",
   "version": "0.0.1",
   "description": "This repo contains an example React App, with the tests written in Cypress",
-  "scripts": {
-    "e2e": "cypress run --browser chrome",
-    "cyopen": "cypress open",
-    "start": "http-server app -p 8888",
-    "test": "npm run start & cypress run --browser chrome",
-    "start-ci": "http-server -p 8888 -c-1 --silent",
-    "test-ci": "run-p --race  start-ci e2e"
-  },
+  "scripts": {},
   "dependencies": {
     "alt": "^0.17.3",
     "director": "1.2.8",
