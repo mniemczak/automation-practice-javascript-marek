@@ -4,7 +4,7 @@
   "description": "Training project: \"Automation practice\"",
   "main": "index.js",
   "scripts": {
-    "e2e": "cypress run -b firefox --e2e",
+    "e2e": "cypress run --headed -b chrome --e2e",
     "cyopen": "cypress open",
     "start-dev": "http-server ./app-version-one -p 8887",
     "start-ci": "http-server ./app-version-one -p 8887 -c-1 --silent",
