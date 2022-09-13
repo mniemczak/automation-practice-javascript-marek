@@ -10,7 +10,7 @@ jobs:
 
       - name: install app
         run: npm install
-        working-directory: app-version-one
+        working-directory: public
       - name: Start server in the background
         run: npm start &
 
