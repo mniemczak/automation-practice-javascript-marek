@@ -1,7 +1,7 @@
 name: E2E
 on: push
 jobs:
-  test:
+  test-app-one:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -10,7 +10,7 @@ jobs:
 
       - name: install app
         run: npm install
-        working-directory: public
+        working-directory: app-version-one
       - name: Start server in the background
         run: npm start &
 
