@@ -24,6 +24,7 @@ on:
 jobs:
   test-app-one:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@master
 
@@ -34,7 +35,7 @@ jobs:
       - name: install app
         run: |
           npm install
-        working-directory: app-version-two
+        working-directory: app-version-three
 
       - name: Start server in the background
         run: |
