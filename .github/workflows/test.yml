@@ -11,9 +11,11 @@ jobs:
       - name: install app
         run: npm install
         working-directory: app-version-two
-        
+
       - name: Start server in the background
-        run: npm start &
+        run: |
+          Get-ChildItem
+          npm start &
 
       # Cypress has its own package.json in folder "e2e"
       - name: Install Cypress and run tests
