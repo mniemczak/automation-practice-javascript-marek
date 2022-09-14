@@ -7,7 +7,9 @@ jobs:
       - uses: actions/checkout@master
 
       - name: install app
-        run: npm install
+        run: |
+          npm install
+          Get-ChildItem
         working-directory: app-version-two
 
       - name: back to app
@@ -19,9 +21,10 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Start server in the background
-        run: npm start &
+        run: |
+          Get-ChildItem
+          npm start &
 
-      # Cypress has its own package.json in folder "e2e"
       - name: Install Cypress and run tests
         uses: cypress-io/github-action@v4
         with:
