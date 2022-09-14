@@ -1,10 +1,15 @@
 name: E2E
 on: push
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  test-app-one:
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@master
+
+      - name: install app
+        run: npm install
+        working-directory: app-version-two
+
       - name: Install root dependencies
         uses: bahmutov/npm-install@v1
 
@@ -16,3 +21,4 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           working-directory: test-framework
+          browser: chrome
