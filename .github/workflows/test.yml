@@ -2,31 +2,21 @@ name: E2E
 on: push
 jobs:
   test-app-one:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-
-      - name: install app
-        run: |
-          npm install
-          Get-ChildItem
-        working-directory: app-version-two
-
-      - name: back to app
-        run: |
-          cd..
-          Get-ChildItem
-
       - name: Install root dependencies
         uses: bahmutov/npm-install@v1
 
+      - name: install app
+        run: npm install
+        working-directory: app-version-two
+        
       - name: Start server in the background
-        run: |
-          Get-ChildItem
-          npm start &
+        run: npm start &
 
+      # Cypress has its own package.json in folder "e2e"
       - name: Install Cypress and run tests
         uses: cypress-io/github-action@v4
         with:
           working-directory: test-framework
-          browser: chrome
