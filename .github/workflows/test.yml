@@ -41,7 +41,6 @@ jobs:
         run: |
           npm start &
 
-      # Cypress has its own package.json in folder "e2e"
       - name: Install Cypress and run tests
         uses: cypress-io/github-action@v4
         with:
