@@ -11,7 +11,9 @@ jobs:
         working-directory: app-version-two
 
       - name: back to app
-        run: cd..
+        run: |
+          cd..
+          Get-ChildItem
 
       - name: Install root dependencies
         uses: bahmutov/npm-install@v1
