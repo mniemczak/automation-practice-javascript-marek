@@ -1,8 +1,11 @@
 name: E2E
+
 on: push
+
 jobs:
-  test-app-one:
-    runs-on: ubuntu-latest
+  test-app:
+    runs-on: windows-latest
+
     steps:
       - uses: actions/checkout@master
       - name: Install root dependencies
