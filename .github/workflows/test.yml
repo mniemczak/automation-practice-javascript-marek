@@ -12,6 +12,8 @@ jobs:
 
       - name: Install root dependencies
         uses: bahmutov/npm-install@v1
+        with:
+          working-directory: automation-practice
 
       - name: Start server in the background
         run: npm start &
