@@ -6,15 +6,16 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Install root dependencies
-        uses: bahmutov/npm-install@v1
+        run: |
+          npm install
 
       - name: install app
-        run: npm install
+        run: |
+          npm install
         working-directory: app-version-two
 
       - name: Start server in the background
         run: |
-          Get-ChildItem
           npm start &
 
       # Cypress has its own package.json in folder "e2e"
@@ -22,3 +23,4 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           working-directory: test-framework
+          browser: chrome
