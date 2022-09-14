@@ -28,7 +28,8 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Install root dependencies
-        uses: bahmutov/npm-install@v1
+        run: |
+          npm install
 
       - name: install app
         run: |
