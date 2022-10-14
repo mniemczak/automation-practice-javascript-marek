@@ -36,7 +36,7 @@ describe('TodoMVC - React', function () {
 
 	// Simple example test presentations
 	context('Add todo test presentation', function () {
-		it.only('Should add 2 todos', function () {
+		it('Should add 2 todos', function () {
 			cy.get('.new-todo').type('learn testing{enter}').type('be cool{enter}');
 			cy.get('.todo-list li').should('have.length', 2);
 		});
