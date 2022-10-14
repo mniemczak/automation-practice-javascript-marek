@@ -32,10 +32,10 @@ jobs:
         run: |
           npm install
 
-      - name: install app
+      - name: Build app
         run: |
           npm install
-        working-directory: app-version-three
+        working-directory: app-version-one
 
       - name: Start server in the background
         run: |

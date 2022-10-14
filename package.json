@@ -4,7 +4,7 @@
   "version": "0.0.0-development",
   "description": "Cypress tests demo app",
   "scripts": {
-    "start": "http-server -c-1 -p 4700 app-version-three"
+    "start": "http-server -c-1 -p 4700 app-version-one"
   },
   "dependencies": {
     "http-server": "14.1.1"
