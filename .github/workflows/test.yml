@@ -32,16 +32,15 @@ jobs:
         run: |
           npm install
 
-      - name: install app
+      - name: Build app
         run: |
           npm install
-        working-directory: app-version-three
+        working-directory: app-version-one
 
       - name: Start server in the background
         run: |
           npm start &
 
-      # Cypress has its own package.json in folder "e2e"
       - name: Install Cypress and run tests
         uses: cypress-io/github-action@v4
         with:
