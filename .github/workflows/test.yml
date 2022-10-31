@@ -35,7 +35,7 @@ jobs:
       - name: Build app
         run: |
           npm install
-        working-directory: app-version-one
+        working-directory: app-version-test
 
       - name: Start server in the background
         run: |
