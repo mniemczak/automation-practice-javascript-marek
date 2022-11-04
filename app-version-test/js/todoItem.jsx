@@ -5,19 +5,6 @@
 /*global React */
 var app = app || {};
 
-let curId = 1;
-const ids = new WeakMap();
-
-function getObjectId(object) {
-	if (ids.has(object)) {
-		return ids.get(object);
-	} else {
-		const id = String(curId++);
-		ids.set(object, id);
-		return id;
-	}
-}
-
 (function () {
 	'use strict';
 
@@ -98,7 +85,6 @@ function getObjectId(object) {
 							type="checkbox"
 							checked={this.props.todo.completed}
 							onChange={this.props.onToggle}
-							data-test={"item-check-"+ getObjectId(this.props.todo)}
 						/>
 						<label onDoubleClick={this.handleEdit}>
 							{this.props.todo.title}

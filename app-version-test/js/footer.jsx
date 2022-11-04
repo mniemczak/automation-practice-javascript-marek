@@ -13,6 +13,8 @@ var app = app || {};
 			var activeTodoWord = app.Utils.pluralize(this.props.count, 'item');
 			var clearButton = null;
 
+			//TODO
+/*
 			if (this.props.completedCount > 0) {
 				clearButton = (
 					<button
@@ -22,7 +24,7 @@ var app = app || {};
 					</button>
 				);
 			}
-
+*/
 			// React idiom for shortcutting to `classSet` since it'll be used often
 			var cx = React.addons.classSet;
 			var nowShowing = this.props.nowShowing;
@@ -42,7 +44,7 @@ var app = app || {};
 						{' '}
 						<li>
 							<a
-								href="#/active" data-test={"filter-activeTodos"}
+								href="#/active"
 								className={cx({selected: nowShowing === app.ACTIVE_TODOS})}>
 									Active
 							</a>
