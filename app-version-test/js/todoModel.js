@@ -50,7 +50,7 @@ var app = app || {};
 		this.inform();
 	};
 
-	app.TodoModel.prototype.toggle = function (todoToToggle) {
+	app.TodoModel.prototype.toggle_DEFECT = function (todoToToggle) {
 		this.todos = this.todos.map(function (todo) {
 			return todo !== todoToToggle ?
 				todo :
