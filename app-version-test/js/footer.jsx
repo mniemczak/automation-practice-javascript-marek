@@ -10,7 +10,6 @@ var app = app || {};
 
 	app.TodoFooter = React.createClass({
 		render: function () {
-      this.props.count--;
 			var activeTodoWord = app.Utils.pluralize(this.props.count, 'item');
 			var clearButton = null;
 
@@ -43,8 +42,8 @@ var app = app || {};
 						{' '}
 						<li>
 							<a
-								href="#/active"
-								className={cx({selected: nowShowing === app.ACTIVE_TODOS_DEFECT})}>
+								href="#/active" data-test={"filter-activeTodos"}
+								className={cx({selected: nowShowing === app.ACTIVE_TODOS})}>
 									Active
 							</a>
 						</li>
