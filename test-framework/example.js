@@ -137,3 +137,13 @@ console.log(myName.replaceAll('Krzysztof', 'Michał'))
 // Metoda: split(str)
 // Split zamienia String na Listę
 console.log('K,r,z,y,s z,t,o,f'.split(' '))
+
+// Metoda: slice(begin, end)
+
+console.log(myName.slice(1, 4))
+
+// **********************************
+// Metoda: substr(begin, n)
+
+console.log(myName.substr(1, 4))
+console.log(myName.substring(1, 4))
