@@ -147,3 +147,111 @@ console.log(myName.slice(1, 4))
 
 console.log(myName.substr(1, 4))
 console.log(myName.substring(1, 4))
+
+"Krzysztof jest trenerem".toLowerCase() === "krzysztof jest trenerem"
+myName.toLowerCase()
+myName.toUpperCase()
+
+
+// Wyodrębnij z podanego tekstu tylko słowo koty
+let text = 'Ala ma fajne koty'
+
+console.log(text.substring(13, 17))
+console.log(text.substring(13))
+
+
+text = "Ala ma fajne koty i psy"
+
+
+
+
+
+// LISTY
+
+// [] // Array()
+
+// liczba 1 znajduje się na indeksie 0
+let list = [1,2,[
+    "Krzysztof", "Marek"
+],3,4,5, "Marianna"]
+// dodawanie na koniec 
+list.push(33)
+
+// usuwanie na końcu
+list.pop()
+
+// dodaje na początku
+list.unshift() // usuwanie shift()
+
+// Edycja konkretnej pozycji na liście
+// list[2] = "3"
+console.log(list[2][1])
+
+let osoby = [
+	'Jan Kowalski',//index 0
+	['Adam Nowak', [['Maria Z', 'Janusz G']]],//index 1
+	'Maria Z',//index 2
+	'Janusz G',//index 3
+	[[['Maria Z', 'Janusz G']]],//index 4
+    [['Maria Z', 'Janusz G'], ['342423432', 3242423432], [324234234, 32432432]],//index 5
+	'Marcin J',//index 6
+];
+console.log(osoby[1][1][0][0])
+
+console.log(osoby[4][0])
+
+
+list.length
+
+//  Sprawdzenie czy dana lista zawiera element / true lub false
+list.includes(2)
+
+// zwraca nam index na którym znajduje się pozycja
+// 6 index
+list[list.indexOf("Marianna")]
+
+
+
+// OBIEKTY
+
+// {}
+
+let obj = {
+    key1: 2,
+    'key 2': "Krzysztof",
+    userNames: [],
+    usersId: [],
+    nip: [324234234, 32432432],
+    "myNum": 3,
+    keyFun: () =>{},
+    keyFun_1: function() {}
+}
+
+obj.key1
+obj.nip[0]
+obj['key 2']
+
+// Przygotuj obiekt biblioteki
+// która zawiera 3 książki, Każda książka powinna posiadać wartość obiektu
+// w którym znajdują się 3 klucze: tytuł, ilość stron, autor
+// Wyloguj w konsoli informacje dla jednej książki bez logowania nawiasów
+
+let library = {
+    book1: {
+        title: ["Kruk"],
+        'number of pages': 15,
+        author: "EDGAR ALAN POE"
+    },
+    book2: {
+        title: "Czarny kot",
+        'number of pages': 90,
+        author: "Edgar.A.Poe"
+    },
+    book3: {
+        title: "Gra o tron",
+        'number of pages': 566,
+        author: "George RR. Martin"
+    }
+}
+
+console.log(library.book1.title[0] + ' ' + library.book1['number of pages'] + ' ' + library.book1.author)
