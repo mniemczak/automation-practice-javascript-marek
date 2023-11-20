@@ -238,7 +238,7 @@ obj['key 2']
 
 let library = {
     book1: {
-        title: ["Kruk"],
+        "title": ["Kruk"],
         'number of pages': 15,
         author: "EDGAR ALAN POE"
     },
@@ -254,4 +254,13 @@ let library = {
     }
 }
 
-console.log(library.book1.title[0] + ' ' + library.book1['number of pages'] + ' ' + library.book1.author)
+console.log(library.book1.title[0] + '\n' + library.book1['number of pages'] + '\n' + library.book1.author)
+
+console.log(`Pierwsza książka to: ${ibrary.book1.title[0]}\nJej ilość stron to: ${library.book1['number of pages']}\nJej autorem jest: library.book1.author`)
+
+
+// Zwrócimy listę z nazwami kluczy w obiekcie book1
+Object.keys(library.book1)
+
+// Zwrócimy wartości dla kluczy w danym obiekcie
+Object.values(library.book1)

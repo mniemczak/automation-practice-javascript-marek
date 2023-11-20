@@ -17,6 +17,7 @@
   "Users": {
     "user1": {
       "username":"Krzysiek",
+      "number of pages": 45,
       "age": 39,
       "IDnumber":"XYZ471528",
       "tel": true,
