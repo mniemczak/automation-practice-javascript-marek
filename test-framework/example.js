@@ -117,7 +117,7 @@ isNaN(1 + undefined) // true
 
 
 
-mynewName = "Krzysztof"
+myName = "Krzysztof"
 
 // długość ciągu znaków
 myName.length
