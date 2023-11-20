@@ -44,3 +44,13 @@ myNewFun()
 // Dodaj funkcję w której znajduje się nowa zmienna z wartością liczbową
 // w funkcji dodaj logowanie w konsoli tej zmiennej 
 // uruchom kod
+
+
+function logVariable () {
+
+    let numberVariable = 66
+
+    console.log(numberVariable)
+}
+
+logVariable()
