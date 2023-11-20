@@ -46,7 +46,7 @@ myNewFun()
 // uruchom kod
 function logVariable () {
 
-    let umberVariable = 66
+    let numberVariable = 66
 
     console.log(numberVariable)
 }
