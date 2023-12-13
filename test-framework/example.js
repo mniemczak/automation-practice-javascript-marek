@@ -300,7 +300,6 @@ console.log("Krzysiek" +  "prowadzi " + "szkolenie")
 
 
 
-
 //a
 let phrase = 'konsola PS5';
 console.log(phrase.substring(0, 2).toUpperCase());
