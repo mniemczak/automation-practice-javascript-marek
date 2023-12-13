@@ -238,20 +238,61 @@ let library = {
 	},
 };
 
-console.log(
-	library.book1.title[0] +
-		'\n' +
-		library.book1['number of pages'] +
-		'\n' +
-		library.book1.author
-);
+// console.log(
+// 	library.book1.title[0] +
+// 		'\n' +
+// 		library.book1['number of pages'] +
+// 		'\n' +
+// 		library.book1.author
+// );
 
-console.log(
-	`Pierwsza książka to: ${ibrary.book1.title[0]}\nJej ilość stron to: ${library.book1['number of pages']}\nJej autorem jest: library.book1.author`
-);
+// console.log(
+// 	`Pierwsza książka to: ${ibrary.book1.title[0]}\nJej ilość stron to: ${library.book1['number of pages']}\nJej autorem jest: library.book1.author`
+// );
 
 // Zwrócimy listę z nazwami kluczy w obiekcie book1
 Object.keys(library.book1);
 
 // Zwrócimy wartości dla kluczy w danym obiekcie
 Object.values(library.book1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//b
+let x = 25;
+let y = 25;
+console.log(x == 50 || y == 50 || x + y == 50);
+
+//d
+
+let myName1 = "Krzysiek"
+let color = ['Blue ', 'Green', 'Red', 'Orange', 'Violet', 'Indigo', 'Yellow '];
+let o = ['th', 'st', 'nd', 'rd'];
+console.log(
+	`${myName1}:
+    1${o[1]} choice is ${color[0]}.
+    2${o[2]} choice is ${color[1]}.
+    3${o[3]} choice is ${color[2]}.
+    4${o[1]} choice is ${color[3]}.`
+);
+
+console.log("Krzysiek" +  "prowadzi " + "szkolenie")
+
+
+
+
+//a
+let phrase = 'konsola PS5';
+console.log(phrase.substring(0, 2).toUpperCase());
+console.log(phrase);
+console.log(`Krzysiek i jego ${phrase}`);
