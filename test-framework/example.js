@@ -238,6 +238,15 @@ let library = {
 	},
 };
 
+
+console.log(
+	library.book1.title[0] +
+		'\n' +
+		library.book1['number of pwedqwages'] +
+		'\n' +
+		library.book1.author
+);
+
 // console.log(
 // 	library.book1.title[0] +
 // 		'\n' +
@@ -245,6 +254,7 @@ let library = {
 // 		'\n' +
 // 		library.book1.author
 // );
+
 
 // console.log(
 // 	`Pierwsza książka to: ${ibrary.book1.title[0]}\nJej ilość stron to: ${library.book1['number of pages']}\nJej autorem jest: library.book1.author`
