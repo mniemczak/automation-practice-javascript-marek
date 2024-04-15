@@ -5,8 +5,7 @@ describe('TodoMVC - React', function () {
 	// setup these constants to match what TodoMVC does
 	let TODO_ITEM_ONE = 'buy some cheese'; // var, let, const
 	let TODO_ITEM_TWO = 'feed the cat';
-	let TODO_ITEM_THREE = 'book a "doctors" appointment';
-
+	let TODO_ITEM_THREE = 'buy some sausages';
 
 	beforeEach(function () {
 		// By default Cypress will automatically
@@ -35,12 +34,10 @@ describe('TodoMVC - React', function () {
 		});
 	});
 
-
-
 	// Simple example test presentations
 	context('Add todo test presentation', function () {
 		it('Should add 2 todos', function () {
-// TODO: Niepoprawny selektor do pola tekstowego TODO
+			// TODO: Niepoprawny selektor do pola tekstowego TODO
 			cy.get('.new-todo').type('learn testing{enter}').type('be cool{enter}');
 			cy.get('.todo-list li').should('have.length', 2);
 		});
@@ -132,8 +129,6 @@ describe('TodoMVC - React', function () {
 			// in your tests below
 			cy.createDefaultTodos().as('todos');
 		});
-
-
 
 		it('should allow me to mark all items as completed', function () {
 			// complete all todos
@@ -284,8 +279,6 @@ describe('TodoMVC - React', function () {
 			cy.get('@todos').eq(2).should('contain', TODO_ITEM_THREE);
 		});
 
-
-
 		it('should trim entered text', function () {
 			cy.get('@todos').eq(1).as('secondTodo').find('label').dblclick();
 
@@ -422,7 +415,6 @@ describe('TodoMVC - React', function () {
 			cy.go('back');
 			cy.get('.todo-list li').should('have.length', 2);
 			cy.go('back');
-			
 		});
 
 		it('should allow me to display completed items', function () {
