@@ -260,7 +260,7 @@ describe('TodoMVC - React', function () {
 			cy.get('@secondTodo').find('label').should('not.be.visible');
 		});
 
-		it.only('should save edits on blur', function () {
+		it('should save edits on blur', function () {
 			cy.get('@todos').eq(1).as('secondTodo').find('label').dblclick();
 
 			cy.get('@secondTodo')
