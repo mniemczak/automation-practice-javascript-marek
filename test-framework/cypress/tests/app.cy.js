@@ -46,10 +46,10 @@ describe('TodoMVC - React', function () {
 			console.log(cy.get('.todo-list li'))
 			console.log(cy.get('.todo-list li')
 			.eq(0))
-			console.log(cy.get('.todo-list li')
+			console.log(cy.get('.todst li')
 			.eq(1))
 
-			
+
 			cy.get('.todo-list li').should('have.length', );
 
 
