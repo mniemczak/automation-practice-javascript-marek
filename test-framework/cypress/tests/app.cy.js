@@ -39,6 +39,8 @@ describe('TodoMVC - React', function () {
 	context('Add todo test presentation', function () {
 		it('Should add 2 todos', function () {
 			// TODO: Niepoprawny selektor do pola tekstowego TODO
+			console.log(TOD_ITEM_EXTRA)
+			console.log('be cool')
 			cy.get('.new-todo').type(TOD_ITEM_EXTRA).type('{enter}').type('be cool{enter}');
 			cy.get('.todo-list li').should('have.length', 2);
 		});
