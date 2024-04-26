@@ -42,7 +42,7 @@ describe('TodoMVC - React', function () {
 			console.log(TOD_ITEM_EXTRA)
 			console.log('be cool')
 			cy.get('.new-todo').type(TOD_ITEM_EXTRA).type('{enter}').type('be cool{enter}');
-			cy.get('.todo-list li').should('have.length', 2);
+			cy.get('.todo-list li').should('have.length', );
 		});
 	});
 
