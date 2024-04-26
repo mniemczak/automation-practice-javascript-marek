@@ -6,6 +6,7 @@ describe('TodoMVC - React', function () {
 	let TODO_ITEM_ONE = 'buy some cheese'; // var, let, const
 	let TODO_ITEM_TWO = 'feed the cat';
 	let TODO_ITEM_THREE = 'buy some sausages';
+	let TOD_ITEM_EXTRA = "EXTRA"
 
 	beforeEach(function () {
 		// By default Cypress will automatically
