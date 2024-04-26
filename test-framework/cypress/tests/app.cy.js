@@ -39,7 +39,7 @@ describe('TodoMVC - React', function () {
 	context('Add todo test presentation', function () {
 		it('Should add 2 todos', function () {
 			// TODO: Niepoprawny selektor do pola tekstowego TODO
-			cy.get('.new-todo').type('learn testing{enter}').type('be cool{enter}');
+			cy.get('.new-todo').type(TOD_ITEM_EXTRA).type('{enter}').type('be cool{enter}');
 			cy.get('.todo-list li').should('have.length', 2);
 		});
 	});
