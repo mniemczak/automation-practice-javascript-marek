@@ -10,7 +10,8 @@
     
    "falseWithName":
     {
-      
+      "one":"1 milion znaków",
+      "two": "500 tyś znaków"
     }
     
   },

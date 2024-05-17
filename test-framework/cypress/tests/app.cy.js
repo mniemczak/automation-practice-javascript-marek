@@ -6,7 +6,7 @@ describe('TodoMVC - React', function () {
 	let TODO_ITEM_ONE = 'buy some cheese'; // var, let, const
 	let TODO_ITEM_TWO = 'feed the cat';
 	let TODO_ITEM_THREE = 'buy some sausages';
-	let TOD_ITEM_EXTRA = "EXTRA"
+	let TOD_ITEM_EXTRA = 'EXTRA';
 
 	beforeEach(function () {
 		// By default Cypress will automatically
@@ -37,22 +37,20 @@ describe('TodoMVC - React', function () {
 
 	// Simple example test presentations
 	context('Add todo test presentation', function () {
-		it.only('Should add 2 todos', function () {
+		it('Should add 2 todos', function () {
 			// TODO: Niepoprawny selektor do pola tekstowego TODO
-			console.log(TOD_ITEM_EXTRA)
-			console.log('be cool')
-			cy.get('.new-todo').type(TOD_ITEM_EXTRA).type('{enter}').type('be cool{enter}');
+			console.log(TOD_ITEM_EXTRA);
+			console.log('be cool');
+			cy.get('.new-todo')
+				.type(TOD_ITEM_EXTRA)
+				.type('{enter}')
+				.type('be cool{enter}');
 
-			console.log(cy.get('.todo-list li'))
-			console.log(cy.get('.todo-list li')
-			.eq(0))
-			console.log(cy.get('.todst li')
-			.eq(1))
+			console.log(cy.get('.todo-list li'));
+			console.log(cy.get('.todo-list li').eq(0));
+			console.log(cy.get('.todo-list li').eq(1));
 
-
-			cy.get('.todo-list li').should('have.length', );
-
-
+			cy.get('.todo-list li').should('have.length');
 		});
 	});
 
@@ -215,8 +213,8 @@ describe('TodoMVC - React', function () {
 			cy.get('@secondTodo').should('have.class', 'completed');
 		});
 
-		it('should allow me to un-mark items as complete', function () {
-			cy.createTodo(TODO_ITEM_ONE).as('firstTodo');
+		it.only('should allow me to un-mark items as complete', function () {
+			cy.createTodo('kjlkhggjhgk').as('firstTodo');
 			cy.createTodo(TODO_ITEM_TWO).as('secondTodo');
 
 			cy.get('@firstTodo').find('.toggle').check();
