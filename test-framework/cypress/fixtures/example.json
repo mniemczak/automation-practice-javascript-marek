@@ -2,41 +2,38 @@
   "name": "Using fixtures to represent data",
   "email": "hello@cypress.io",
   "body": "Fixtures are a great way to mock data for responses to routes",
-  "false-data":{
-    "falseWithExtraNumber":{
-      
-      
-  },
-    
-   "falseWithName":
-    {
-      "one":"1 milion znaków",
+  "false-data": {
+    "falseWithExtraNumber": {},
+    "falseWithName": {
+      "one": "1 milion znaków",
       "two": "500 tyś znaków"
-      
     }
-    
   },
   "Users": {
     "user1": {
-      "username":"Krzysiek",
+      "username": "Krzysiek",
       "number of pages": 45,
       "age": 39,
-      "IDnumber":"XYZ471528",
+      "IDnumber": "XYZ471528",
       "tel": true,
       "telNumber": 444555666
     },
-    "user2":{
-      "username":"Marek",
-      "age":45,
-      "IDnumber":"IUY558698",
+    "user2": {
+      "username": "Marek",
+      "age": 45,
+      "IDnumber": "IUY558698",
       "tel": false
     },
-    "user3":{
-      "username":"Marek",
-      "age":45,
-      "IDnumber":"IUY558698",
+    "user3": {
+      "username": "Marek",
+      "age": 45,
+      "IDnumber": "IUY558698",
       "tel": true,
-      "telNumber": [777888999,444555222,999663333]
+      "telNumber": [
+        777888999,
+        444555222,
+        999663333
+      ]
     }
   }
 }
