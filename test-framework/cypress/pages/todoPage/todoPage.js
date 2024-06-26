@@ -1,8 +1,12 @@
 import todoPageSelectors from "./todoPageSelectors"
-
+import basePage from '../basePage.js'
 
 
 class TodoPage {
+
+    constructor() {
+
+    }
 
 
     addTodo(todoName = 'Nowe zadanie todo'){

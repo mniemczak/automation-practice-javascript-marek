@@ -205,35 +205,5 @@ class Animal {
 		this.animalName = animalName;
 	}
 
-	speak(message = 'makes a noise.') {
-		console.log(this.animalName + message);
-	}
-}
-class Dog extends Animal {
-	constructor(dogName) {
-		super(dogName);
-	}
 
 
-	barking() {
-		this.speak('barks');
-	}
-}
-
-
-let dog1 = new Dog('Łapka');
-let dog2 = new Dog('Bigos');
-let dog3 = new Dog('?');
-
-dog1.barking()
-
-console.log(dog2.animalName)
-
-
-
-
-
-
-
-
-//dog.barking();
