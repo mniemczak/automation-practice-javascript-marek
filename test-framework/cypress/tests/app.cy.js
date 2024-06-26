@@ -1,6 +1,7 @@
 // type definitions for Cypress object "cy"
 /// <reference types="cypress" />
 
+
 describe('TodoMVC - React', function () {
 	// setup these constants to match what TodoMVC does
 	let TODO_ITEM_ONE = 'buy some cheese'; // var, let, const
@@ -165,7 +166,10 @@ describe('TodoMVC - React', function () {
 
 			cy.get('@todos').eq(1).should('not.have.class', 'completed');
 
-			cy.get('@todos').eq(2).should('not.have.class', 'completed');
+			/*
+			Błędnie określona pozycja zadania
+			*/
+			cy.get('@todos').eq(1).should('not.have.class', 'completed');
 		});
 
 		it('complete all checkbox should update state when items are completed / cleared', function () {
@@ -461,4 +465,6 @@ describe('TodoMVC - React', function () {
 			});
 		});
 	});
+
+	
 });
