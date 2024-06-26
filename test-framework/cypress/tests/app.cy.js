@@ -1,6 +1,6 @@
 // type definitions for Cypress object "cy"
 /// <reference types="cypress" />
-import { todoPage } from "../pages/todoPage/todoPage";
+import { todoPage } from '../pages/todoPage/todoPage';
 
 describe('TodoMVC - React', function () {
 	// setup these constants to match what TodoMVC does
@@ -38,13 +38,12 @@ describe('TodoMVC - React', function () {
 
 	// Simple example test presentations
 	context('Add todo test presentation', function () {
-		
 		it('Should add 2 todos', function () {
 			// TODO: Niepoprawny selektor do pola tekstowego TODO
 			console.log(TOD_ITEM_EXTRA);
 			console.log('be cool');
-			todoPage.addTodo()
-			todoPage.addTodo()
+			todoPage.addTodo();
+			todoPage.addTodo();
 
 			console.log(cy.get('.todo-list li'));
 			console.log(cy.get('.todo-list li').eq(0));
@@ -463,6 +462,4 @@ describe('TodoMVC - React', function () {
 			});
 		});
 	});
-
-	
 });

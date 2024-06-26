@@ -204,6 +204,4 @@ class Animal {
 	constructor(animalName = 'Animal') {
 		this.animalName = animalName;
 	}
-
-
-// słowo
+}
