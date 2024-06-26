@@ -24,7 +24,8 @@ describe('TodoMVC - React', function () {
 		// http://localhost:8888 - env variable: 'appTwoUrl'
 		// http://localhost:8889 - env variable: 'appThreeUrl'
 		// https://on.cypress.io/api/visit
-		cy.visit(Cypress.env('appUrl'));
+
+		todoPage.visitPage(Cypress.env('appUrl'))
 	});
 
 	afterEach(() => {
@@ -38,18 +39,19 @@ describe('TodoMVC - React', function () {
 
 	// Simple example test presentations
 	context('Add todo test presentation', function () {
-		it('Should add 2 todos', function () {
+		
+		it.only('Should add 2 todos', function () {
 			// TODO: Niepoprawny selektor do pola tekstowego TODO
 			console.log(TOD_ITEM_EXTRA);
 			console.log('be cool');
 			todoPage.addTodo();
 			todoPage.addTodo();
 
-			console.log(cy.get('.todo-list li'));
-			console.log(cy.get('.todo-list li').eq(0));
-			console.log(cy.get('.todo-list li').eq(1));
+			// console.log(cy.get('.todo-list li'));
+			// console.log(cy.get('.todo-list li').eq(0));
+			// console.log(cy.get('.todo-list li').eq(1));
 
-			cy.get('.todo-list li').should('have.length');
+			todoPage.checkAddTodo()
 		});
 	});
 
@@ -216,7 +218,7 @@ describe('TodoMVC - React', function () {
 			cy.get('@secondTodo').should('have.class', 'completed');
 		});
 
-		it.only('should allow me to un-mark items as complete', function () {
+		it('should allow me to un-mark items as complete', function () {
 			cy.createTodo('kjlkhggjhgk').as('firstTodo');
 			cy.createTodo(TODO_ITEM_TWO).as('secondTodo');
 
