@@ -176,87 +176,60 @@
  
  
  
-//  const library = {
-// 	book1:{
-// 		title: "Czarny kot"
-// 	},
-// 	book2:{
-// 		title: "Lestat"
-// 	},
-// 	book3:{
-// 		title: "Wywiad z wampirem"
-// 	}
-//  }	 
+// //  const library = {
+// // 	book1:{
+// // 		title: "Czarny kot"
+// // 	},
+// // 	book2:{
+// // 		title: "Lestat"
+// // 	},
+// // 	book3:{
+// // 		title: "Wywiad z wampirem"
+// // 	}
+// //  }	 
  
  
  
  
-//  function myFun (myName) {
-// 	  console.log(myName)
-//  }
+// //  function myFun (myName) {
+// // 	  console.log(myName)
+// //  }
  
  
-//  myFun("Krzysiek")
-//  myFun("Marek")
-//  myFun("Kasia")
+// //  myFun("Krzysiek")
+// //  myFun("Marek")
+// //  myFun("Kasia")
  
  
-//  let myNewFun = () => {
-// 	  return {
+// //  let myNewFun = () => {
+// // 	  return {
 		  
-// 		  book1: {
-// 			  title: "Jakiś tytuł"
-// 		  }
-// 	  }
-//  }
+// // 		  book1: {
+// // 			  title: "Jakiś tytuł"
+// // 		  }
+// // 	  }
+// //  }
  
  
-//  myNewFun()
+// //  myNewFun()
  
  
  
- let func1 = x => x * x
+// //  let func1 = x => x * x
  
  
-//  console.log(func1(2))
-//  console.log(func1(5))
-//  console.log(func1(67))
+// //  console.log(func1(2))
+// //  console.log(func1(5))
+// //  console.log(func1(67))
  
-//  let login = (login = '', pass = "", loginSelector, passSelector) => {
+// //  let login = (login = '', pass = "", loginSelector, passSelector) => {
 	 
-//  }
+// //  }
  
-//  login('wiking123@o2.pl',"coś123")
-//  login('wiking123@o2.pl',"coś123", "selectorLogin", "selectorPass")
-//  login("krzysiek246", "974643907957034)&(&)((&_)", "selectorLogin", "PassSelector")
+// //  login('wiking123@o2.pl',"coś123")
+// //  login('wiking123@o2.pl',"coś123", "selectorLogin", "selectorPass")
+// //  login("krzysiek246", "974643907957034)&(&)((&_)", "selectorLogin", "PassSelector")
 
-//  login()
-
-
-let test50 = (x, y) => ((x == 50 || y == 50) || (x + y == 50))
-
-function getUserName () {
-	return "Krzysztof"
-}
-
-let getNewUserName = () => {
-	return "Krzysztof"
-}
-
-// let func1 = x => x * x
-
-console.log(func1(2))
+// //  login()
 
 
-
-//  const library = {
-// 	book1:{
-// 		title: "Czarny kot"
-// 	},
-// 	book2: function () {
-// 		return this.book1.title
-// 	},
-// 	book3:{
-// 		title: "Wywiad z wampirem"
-// 	}
-//  }
