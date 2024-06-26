@@ -1,11 +1,11 @@
 import todoPageSelectors from "./todoPageSelectors"
-import basePage from '../basePage.js'
+import BasePage from '../basePage.js'
 
 
-class TodoPage {
+class TodoPage extends BasePage{
 
     constructor() {
-
+        super()
     }
 
 
