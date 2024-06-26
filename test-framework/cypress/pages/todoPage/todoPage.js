@@ -16,7 +16,7 @@ class TodoPage extends BasePage{
     }
 
     checkAddTodo() {
-        cy.get(todoPageSelectors.todoList).should('have.length');
+        cy.get(todoPageSelectors.todoList).should('have.length', 2);
     }
 }
 
