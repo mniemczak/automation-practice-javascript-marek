@@ -13,10 +13,14 @@ class TodoPage extends BasePage{
         cy.get(todoPageSelectors.newTodoInput)
 				.type(todoName)
 				.type('{enter}')
+
+        return this
     }
 
     checkAddTodo() {
         cy.get(todoPageSelectors.todoList).should('have.length', 2);
+
+        return this
     }
 }
 

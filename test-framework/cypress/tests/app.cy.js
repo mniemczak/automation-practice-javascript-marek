@@ -44,14 +44,26 @@ describe('TodoMVC - React', function () {
 			// TODO: Niepoprawny selektor do pola tekstowego TODO
 			console.log(TOD_ITEM_EXTRA);
 			console.log('be cool');
-			todoPage.addTodo();
-			todoPage.addTodo();
+			cy.fixture('example.json').then((exampleObj)=> {
+				console.log(exampleObj.name)
+
+				// exampleObj.false-data.falseWithName.one
+			})
+
+			// todoPage.addTodo();
+			// todoPage.addTodo();
 
 			// console.log(cy.get('.todo-list li'));
 			// console.log(cy.get('.todo-list li').eq(0));
 			// console.log(cy.get('.todo-list li').eq(1));
 
-			todoPage.checkAddTodo()
+			// todoPage.checkAddTodo()
+
+
+			todoPage
+			.addTodo()
+			.addTodo()
+			.checkAddTodo()
 		});
 	});
 
