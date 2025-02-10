@@ -1,13 +1,11 @@
 // type definitions for Cypress object "cy"
 /// <reference types="cypress" />
-import { todoPage } from '../pages/todoPage/todoPage';
 
 describe('TodoMVC - React', function () {
 	// setup these constants to match what TodoMVC does
 	let TODO_ITEM_ONE = 'buy some cheese'; // var, let, const
 	let TODO_ITEM_TWO = 'feed the cat';
 	let TODO_ITEM_THREE = 'buy some sausages';
-	let TOD_ITEM_EXTRA = 'EXTRA';
 
 	beforeEach(function () {
 		// By default Cypress will automatically
@@ -19,13 +17,8 @@ describe('TodoMVC - React', function () {
 		// before each test, which serves us the
 		// TodoMVC App we want to test against
 		//
-		// We've set our baseUrl to be:
-		// http://localhost:8887 - env variable: 'appOneUrl'
-		// http://localhost:8888 - env variable: 'appTwoUrl'
-		// http://localhost:8889 - env variable: 'appThreeUrl'
-		// https://on.cypress.io/api/visit
 
-		todoPage.visitPage(Cypress.env('appUrl'))
+		cy.visit(Cypress.env('appUrl'));
 	});
 
 	afterEach(() => {
@@ -39,31 +32,19 @@ describe('TodoMVC - React', function () {
 
 	// Simple example test presentations
 	context('Add todo test presentation', function () {
-		
-		it.only('Should add 2 todos', function () {
+		it('Should add 2 todos', function () {
 			// TODO: Niepoprawny selektor do pola tekstowego TODO
-			console.log(TOD_ITEM_EXTRA);
+
 			console.log('be cool');
-			cy.fixture('example.json').then((exampleObj)=> {
-				console.log(exampleObj.name)
+			cy.fixture('example.json').then((exampleObj) => {
+				console.log(exampleObj.name);
 
 				// exampleObj.false-data.falseWithName.one
-			})
+			});
 
-			// todoPage.addTodo();
-			// todoPage.addTodo();
+			cy.get('.new-todo').type(TODO_ITEM_ONE).type('{enter}');
 
-			// console.log(cy.get('.todo-list li'));
-			// console.log(cy.get('.todo-list li').eq(0));
-			// console.log(cy.get('.todo-list li').eq(1));
-
-			// todoPage.checkAddTodo()
-
-
-			todoPage
-			.addTodo()
-			.addTodo()
-			.checkAddTodo()
+			cy.get('.todo-list li').should('have.length', 1);
 		});
 	});
 
