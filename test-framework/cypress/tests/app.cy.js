@@ -338,11 +338,11 @@ describe('TodoMVC - React', function () {
 			cy.createDefaultTodos().as('todos');
 		});
 
-		// it('should display the correct text', function () {
-		// 	cy.get('@todos').eq(0).find('.toggle').check();
+		it('should display the correct text', function () {
+			cy.get('@todos').eq(0).find('.toggle').check();
 
-		// 	cy.get('.clear-completed').contains('Clear completed');
-		// });
+			cy.get('.clear-completed').contains('Clear completed');
+		});
 
 		it('should remove completed items when clicked', function () {
 			cy.get('@todos').eq(1).find('.toggle').check();
