@@ -1,0 +1,86 @@
+ZADANIE 1
+Przeanalizować przygotowane skrypty testowe i na podstawie tytułów testów zlokalizowanych w pliku testowym, testy znajdują się w: test-framework/cypress/test/app.cy.js -
+(Każde słowo it określa skrypt automatyczny) w celu wskazania czy została utworzona wystarczająca ilość testów dla aplikacji oraz w celu wskazania czy znajdują się w projekcie testy nadmiarowe.
+
+ODPOWIEDŹ:
+Odpowiadając na pytanie, według mnie nie została utworzona wystarczająca ilość testów dla aplikacji. Można by np. dopisać testy walidacji pola tekstowego.
+
+Jako testy nadmiarowe wskazałbym:
+
+'Should add 2 todos
+'should allow me to add todo items'
+'adds items'
+bo to co weryfikują poniekąd pokrywa się w każdym z tych przypadków (dodawanie zadania).
+
+oraz
+
+'should allow me to mark all items as completed' wydaje się podobny do 'should allow me to mark items as complete'
+
+i
+
+'should allow me to clear the complete state of all items' podobny do 'should allow me to un-mark items as complete'.
+*********************************************************************************************************************
+
+ZADANIE 2
+Przeanalizować przygotowane przypadki na podstawie tytułów testów zlokalizowanych w pliku testowym, testy znajdują się w: test-framework/cypress/test/app.cy.js -
+(Każde słowo it określa skrypt automatyczny) w celu wskazania czy napisane testy umożliwiają wykrycie defektów występujących w różnych wersjach aplikacji, opisanych w pliku Bugs.md
+
+ODPOWIEDŹ:
+Według mnie defekt "Nie działa oznaczenie zaznaczenia dla przycisku "Active". Nie pojawia się szara ramka." można wykryć testem 'should highlight the currently applied filter'.
+Defekt "Nie działa zaznaczenie "completed" dla dodanego todo. Pomimo jego oznaczenia po przejściu pomiędzy filtrami "All", "Active", "Completed" pozycja zaznaczona wraca do poprzedniego stanu" można wykryć testem 'should persist its data'.
+Defekt "Brak funkcjonalności: "Clear completed"" można wykryć testem 'should display the correct text'.
+*********************************************************************************************************************
+
+ZADANIE 4
+Przygotować minimum 3 do 5 przypadków testowych dodatkowych pokrywających inne (Alternatywne / Kreatywne) przypadki które nie zostały ujęte w formie testów it w projekcie automatyzacji testów.
+
+ODPOWIEDŹ:
+W poniższych przypadkach, które weryfikują walidację, jako że nie znam wymagań walidacyjnych dla pola tekstowego z aplikacji, na potrzeby zadania przyjąłem przykładową wartość na maksymalną liczbę znaków oraz na dopuszczalne znaki specjalne.
+--------------------------------------------------------------------------
+Id: 1
+Tytuł: Dodanie zadania o maksymalnej długości znaków
+Warunek wstępny: brak dodanych zadań
+Kroki:
+1. W polu tekstowym wprowadź tekst zawierający 255 znaków.
+2. Zatwierdź enterem.
+
+Oczekiwany rezultat: Wprowadzone zadanie zostaje dodane.
+Warunki końcowe: Widoczne zadanie zawierające wszystkie wprowadzone znaki.
+Dane testowe: Losowy tekst składający się z 255 znaków alfanumerycznych.
+Autor: Marek
+--------------------------------------------------------------------------
+Id: 2
+Tytuł: Dodanie zadania składającego się ze znaków specjalnych
+Warunek wstępny: brak dodanych zadań
+Kroki:
+1. W polu tekstowym wprowadź tekst zawierający znaki specjalne.
+2. Zatwierdź enterem.
+
+Oczekiwany rezultat: Wprowadzone zadanie zostaje dodane.
+Warunki końcowe: Widoczne zadanie zawierające wszystkie wprowadzone znaki.
+Dane testowe: !@#$%^&*()
+Autor: Marek
+--------------------------------------------------------------------------
+Id: 3
+Tytuł: Przekreślenie ukończonego zadania
+Warunek wstępny: dodane zadanie w statusie 'Active'.
+Kroki:
+1. Przejdź na zakładkę 'Active'
+2. Przy widocznym zadaniu zaznacz checkbox.
+3. Przejdź na zakładkę 'Completed'
+
+Oczekiwany rezultat: tekst ukończonego zadania jest przekreślony.
+Warunki końcowe: Widoczne zadanie z przekreślonym tekstem.
+Dane testowe: Losowy tekst.
+Autor: Marek
+--------------------------------------------------------------------------
+Id: 4
+Tytuł: Placeholder w polu tekstowym
+Warunek wstępny: brak dodanych zadań
+Kroki:
+1. Przejdź na pole tekstowe.
+
+Oczekiwany rezultat: W polu tekstowym widoczny placeholder o treści "What needs to be done?".
+Warunki końcowe: Widoczne okno z polem do wprowadzania zadań.
+Autor: Marek
+--------------------------------------------------------------------------
