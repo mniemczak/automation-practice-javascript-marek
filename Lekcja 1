@@ -62,16 +62,15 @@ Dane testowe: !@#$%^&*()
 Autor: Marek
 --------------------------------------------------------------------------
 Id: 3
-Tytuł: Przekreślenie ukończonego zadania
-Warunek wstępny: dodane zadanie w statusie 'Active'.
+Tytuł: Usunięcie dodanego zadania za pomocą 'x'
+Warunek wstępny: dodany element w statusie 'Active'.
 Kroki:
 1. Przejdź na zakładkę 'Active'
-2. Przy widocznym zadaniu zaznacz checkbox.
-3. Przejdź na zakładkę 'Completed'
+2. Najedź wskaźnikiem myszki na widoczne zadanie.
+3. Kliknij na przycisk 'x'.
 
-Oczekiwany rezultat: tekst ukończonego zadania jest przekreślony.
-Warunki końcowe: Widoczne zadanie z przekreślonym tekstem.
-Dane testowe: Losowy tekst.
+Oczekiwany rezultat: zadanie zostaje usunięte.
+Warunki końcowe: Widoczne okno z polem do wprowadzania zadań.
 Autor: Marek
 --------------------------------------------------------------------------
 Id: 4
