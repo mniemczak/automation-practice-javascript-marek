@@ -119,7 +119,7 @@ describe('TodoMVC - React', function () {
 		});
 
 		it('should show #main and #footer when items added', function () {
-			TODO_ITEM_ONE = '!@#$%^&*()-=';
+			//TODO_ITEM_ONE = '!@#$%^&*()-=';
 			cy.createTodo(TODO_ITEM_ONE);
 			cy.get('.main').should('be.visible');
 			cy.get('.footer').should('be.visible');
@@ -203,7 +203,7 @@ describe('TodoMVC - React', function () {
 			// the return value is the <li> in the <ul.todos-list>
 			//TODO_ITEM_ONE = 'żźćńłśąęó';
 			cy.createTodo(TODO_ITEM_ONE).as('firstTodo');
-			TODO_ITEM_TWO = 'ŻŹĆŃŁŚĄĘÓ';
+			//TODO_ITEM_TWO = 'ŻŹĆŃŁŚĄĘÓ';
 			cy.createTodo(TODO_ITEM_TWO).as('secondTodo');
 
 			cy.get('@firstTodo').find('.toggle').check();
@@ -219,7 +219,7 @@ describe('TodoMVC - React', function () {
 
 		it('should allow me to un-mark items as complete', function () {
 			cy.createTodo('kjlkhggjhgk').as('firstTodo');
-			TODO_ITEM_TWO = '<>?:"{}|+_~';
+			//TODO_ITEM_TWO = '<>?:"{}|+_~';
 			cy.createTodo(TODO_ITEM_TWO).as('secondTodo');
 
 			cy.get('@firstTodo').find('.toggle').check();
@@ -336,7 +336,7 @@ describe('TodoMVC - React', function () {
 			//TODO_ITEM_ONE = 'TEKST DRUKOWANY';
 			cy.createTodo(TODO_ITEM_ONE);
 			cy.get('.todo-count').contains('1 item left');
-			TODO_ITEM_TWO = 'Tekst wieloczłonowy Tekst wieloczłonowy';
+			//TODO_ITEM_TWO = 'Tekst wieloczłonowy Tekst wieloczłonowy';
 			cy.createTodo(TODO_ITEM_TWO);
 			cy.get('.todo-count').contains('2 items left');
 		});
