@@ -203,7 +203,7 @@ describe('TodoMVC - React', function () {
 			// the return value is the <li> in the <ul.todos-list>
 			TODO_ITEM_ONE = 'żźćńłśąęó';
 			cy.createTodo(TODO_ITEM_ONE).as('firstTodo');
-			TODO_ITEM_TWO = ',./;[]\';
+			TODO_ITEM_TWO = 'ŻŹĆŃŁŚĄĘÓ';
 			cy.createTodo(TODO_ITEM_TWO).as('secondTodo');
 
 			cy.get('@firstTodo').find('.toggle').check();
