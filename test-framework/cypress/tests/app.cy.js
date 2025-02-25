@@ -92,7 +92,7 @@ describe('TodoMVC - React', function () {
 		});
 
 		it('should clear text input field when an item is added', function () {
-			TODO_ITEM_ONE = '1234567890';
+			//TODO_ITEM_ONE = '1234567890';
 			cy.get('.new-todo').type(TODO_ITEM_ONE).type('{enter}');
 
 			cy.get('.new-todo').should('have.text', '');
