@@ -201,7 +201,7 @@ describe('TodoMVC - React', function () {
 			// our custom command 'createTodo'
 			//
 			// the return value is the <li> in the <ul.todos-list>
-			TODO_ITEM_ONE = 'żźćńłśąęó';
+			/TODO_ITEM_ONE = 'żźćńłśąęó';
 			cy.createTodo(TODO_ITEM_ONE).as('firstTodo');
 			TODO_ITEM_TWO = 'ŻŹĆŃŁŚĄĘÓ';
 			cy.createTodo(TODO_ITEM_TWO).as('secondTodo');
@@ -333,7 +333,7 @@ describe('TodoMVC - React', function () {
 
 	context('Counter', function () {
 		it('should display the current number of todo items', function () {
-			TODO_ITEM_ONE = 'TEKST DRUKOWANY';
+			//TODO_ITEM_ONE = 'TEKST DRUKOWANY';
 			cy.createTodo(TODO_ITEM_ONE);
 			cy.get('.todo-count').contains('1 item left');
 			TODO_ITEM_TWO = 'Tekst wieloczłonowy Tekst wieloczłonowy';
@@ -388,9 +388,9 @@ describe('TodoMVC - React', function () {
 					.should('contain', TODO_ITEM_TWO)
 					.and('not.have.class', 'completed');
 			}
-			TODO_ITEM_ONE = '€$';
+			//TODO_ITEM_ONE = '€$';
 			cy.createTodo(TODO_ITEM_ONE).as('firstTodo');
-			TODO_ITEM_TWO = ' Ten tekst ma spacje na początku i na końcu ';
+			//TODO_ITEM_TWO = ' Ten tekst ma spacje na początku i na końcu ';
 			cy.createTodo(TODO_ITEM_TWO).as('secondTodo');
 			cy.get('@firstTodo')
 				.find('.toggle')
