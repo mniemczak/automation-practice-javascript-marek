@@ -41,7 +41,7 @@ describe('TodoMVC - React', function () {
 
 				// exampleObj.false-data.falseWithName.one
 			});
-			let TODO_ITEM_ONE = 'Test 1'
+			//let TODO_ITEM_ONE = 'Test 1'
 			cy.get('.new-todo').type(TODO_ITEM_ONE).type('{enter}');
 
 			cy.get('.todo-list li').should('have.length', 1);
