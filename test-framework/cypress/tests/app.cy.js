@@ -41,7 +41,7 @@ describe('TodoMVC - React', function () {
 
 				// exampleObj.false-data.falseWithName.one
 			});
-			//let TODO_ITEM_ONE = 'Test 1'
+			TODO_ITEM_ONE = 'Test 1'
 			cy.get('.new-todo').type(TODO_ITEM_ONE).type('{enter}');
 
 			cy.get('.todo-list li').should('have.length', 1);
@@ -60,7 +60,7 @@ describe('TodoMVC - React', function () {
 
 		it('should allow me to add todo items', function () {
 			// create 1st todo
-			//TODO_ITEM_ONE = 'A';
+			TODO_ITEM_ONE = 'A';
 			cy.get('.new-todo').type(TODO_ITEM_ONE).type('{enter}');
 
 			// make sure the 1st label contains the 1st todo text
@@ -70,7 +70,7 @@ describe('TodoMVC - React', function () {
 				.should('contain', TODO_ITEM_ONE);
 
 			// create 2nd todo
-			//TODO_ITEM_TWO = 'To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To.';
+			TODO_ITEM_TWO = 'To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To.';
 			cy.get('.new-todo').type(TODO_ITEM_TWO).type('{enter}');
 
 			// make sure the 2nd label contains the 2nd todo text
@@ -92,7 +92,7 @@ describe('TodoMVC - React', function () {
 		});
 
 		it('should clear text input field when an item is added', function () {
-			//TODO_ITEM_ONE = '1234567890';
+			TODO_ITEM_ONE = '1234567890';
 			cy.get('.new-todo').type(TODO_ITEM_ONE).type('{enter}');
 
 			cy.get('.new-todo').should('have.text', '');
@@ -120,7 +120,7 @@ describe('TodoMVC - React', function () {
 		});
 
 		it('should show #main and #footer when items added', function () {
-			//TODO_ITEM_ONE = '!@#$%^&*()-=';
+			TODO_ITEM_ONE = '!@#$%^&*()-=';
 			cy.createTodo(TODO_ITEM_ONE);
 			cy.get('.main').should('be.visible');
 			cy.get('.footer').should('be.visible');
@@ -202,9 +202,9 @@ describe('TodoMVC - React', function () {
 			// our custom command 'createTodo'
 			//
 			// the return value is the <li> in the <ul.todos-list>
-			//TODO_ITEM_ONE = 'żźćńłśąęó';
+			TODO_ITEM_ONE = 'żźćńłśąęó';
 			cy.createTodo(TODO_ITEM_ONE).as('firstTodo');
-			//TODO_ITEM_TWO = 'ŻŹĆŃŁŚĄĘÓ';
+			TODO_ITEM_TWO = 'ŻŹĆŃŁŚĄĘÓ';
 			cy.createTodo(TODO_ITEM_TWO).as('secondTodo');
 
 			cy.get('@firstTodo').find('.toggle').check();
@@ -220,7 +220,7 @@ describe('TodoMVC - React', function () {
 
 		it('should allow me to un-mark items as complete', function () {
 			cy.createTodo('kjlkhggjhgk').as('firstTodo');
-			//TODO_ITEM_TWO = '<>?:"{}|+_~';
+			TODO_ITEM_TWO = '<>?:"{}|+_~';
 			cy.createTodo(TODO_ITEM_TWO).as('secondTodo');
 
 			cy.get('@firstTodo').find('.toggle').check();
@@ -335,10 +335,10 @@ describe('TodoMVC - React', function () {
 
 	context('Counter', function () {
 		it('should display the current number of todo items', function () {
-			//TODO_ITEM_ONE = 'TEKST DRUKOWANY';
+			TODO_ITEM_ONE = 'TEKST DRUKOWANY';
 			cy.createTodo(TODO_ITEM_ONE);
 			cy.get('.todo-count').contains('1 item left');
-			//TODO_ITEM_TWO = 'Tekst wieloczłonowy Tekst wieloczłonowy';
+			TODO_ITEM_TWO = 'Tekst wieloczłonowy Tekst wieloczłonowy';
 			cy.createTodo(TODO_ITEM_TWO);
 			cy.get('.todo-count').contains('2 items left');
 		});
@@ -391,9 +391,9 @@ describe('TodoMVC - React', function () {
 					.should('contain', TODO_ITEM_TWO)
 					.and('not.have.class', 'completed');
 			}
-			//TODO_ITEM_ONE = '€$';
+			TODO_ITEM_ONE = '€$';
 			cy.createTodo(TODO_ITEM_ONE).as('firstTodo');
-			//TODO_ITEM_TWO = ' Ten tekst ma spacje na początku i na końcu ';
+			TODO_ITEM_TWO = ' Ten tekst ma spacje na początku i na końcu ';
 			cy.createTodo(TODO_ITEM_TWO).as('secondTodo');
 			cy.get('@firstTodo')
 				.find('.toggle')
