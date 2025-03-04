@@ -4,16 +4,16 @@
 
 Aplikacja znajduje się pod adresem [Todos](https:/127.0.0.1/4700)
 
-Opis projektu:
+Opis projektu:  
 Projekt tworzenia testów automatycznych dla aplikacji Todos.
 
-Lista przypadków testowych:
+Lista przypadków testowych:  
 - Dodanie zadania o maksymalnej długości znaków
 - Dodanie zadania składającego się ze znaków specjalnych
 - Usunięcie dodanego zadania za pomocą 'x'
 - Placeholder w polu tekstowym
 
-Dane testowe:
+Dane testowe:  
 let fixture = {
   "vtest-daneTestowe1": {
       "todo255": "To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To.",
