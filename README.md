@@ -14,6 +14,7 @@ Lista przypadków testowych:
 - Placeholder w polu tekstowym
 
 Dane testowe:  
+javascript  
 let fixture = {
   "vtest-daneTestowe1": {
       "todo255": "To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To jest tekst o długości 255 znaków To.",
