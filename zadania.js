@@ -30,3 +30,10 @@ klasa1.metodaA("Ania");
 klasa1.metodaA("Radek");
 
 klasa1.metodaB("Marek");
+
+//Rozwiązanie do zadania 1b
+
+let liczba1 = 10;
+let liczba2 = 50;
+
+console.log((liczba1===50 || liczba2===50) || (liczba1+liczba2===50));
