@@ -37,3 +37,12 @@ let liczba1 = 8;
 let liczba2 = 40;
 
 console.log((liczba1===50 || liczba2===50) || (liczba1+liczba2===50));
+
+//Rozwiązanie do zadania 1c
+
+let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+let o = ["th","st","nd","rd"];
+
+for(let i=0; i<3; i++){
+    console.log(`${i+1}${o[i+1]} choice is ${color[i]}.`);
+}
