@@ -1,13 +1,13 @@
 //Rozwiązanie do zadania 1a
 
-class Klasa{
-    metodaA(name){
+class User{
+    getName(name){
         console.log(name);
         return name;
     }
 
-    metodaB(name){
-        const name2 = this.metodaA(name);
+    readModifiedName(name){
+        const name2 = this.getName(name);
         
         //wylogowanie 2 pierwszych liter imienia
         console.log(name2.slice(0,2));
@@ -24,12 +24,12 @@ class Klasa{
 }
 
 //Kilkukrotne wywołanie metodaA z różnymi imionami:
-const klasa1 = new Klasa();
-klasa1.metodaA("Krzysztof");
-klasa1.metodaA("Ania");
-klasa1.metodaA("Radek");
+const user1 = new User();
+user1.getName("Krzysztof");
+user1.getName("Ania");
+user1.getName("Radek");
 
-klasa1.metodaB("Marek");
+user1.readModifiedName("Marek");
 
 //Rozwiązanie do zadania 1b
 
