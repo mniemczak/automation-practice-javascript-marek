@@ -63,7 +63,7 @@ basicUser.getUserData();
 const cartUser = new CartUser();
 cartUser.getUserData();
 
-/Zadanie 1.2
+//Zadanie 1.2
 
 // Tworzenie obiektu 'library'
 const library = {
