@@ -6,10 +6,13 @@ class User{
         this.age = age;
         this.address = address;
     }
-    // Metoda logująca dane użytkownika
-    logUserData() {
-        console.log(`Imię: ${this.name}, Numer telefonu: ${this.phoneNumber}, E-mail: ${this.email}`);
-    }
+   
+    // Metoda obliczająca wiek w miesiącach
+    calculateAgeInMonths() {
+        const years = this.age;
+        const months = years * 12;
+        console.log(`${this.name} ma ${years} lat, co odpowiada ${months} miesiącom.`);
+}
 
     // Metoda sprawdzająca wiek użytkownika
     checkAge() {
@@ -20,7 +23,7 @@ class User{
         }
     }
 
-    // Metoda wykorzystująca wiele elementów z konstruktora
+    // Metoda logująca wszystkie dane użytkownika
     displayFullInfo() {
         console.log(`Imię: ${this.name}, Numer telefonu: ${this.phoneNumber}, E-mail: ${this.email}, Wiek: ${this.age}, Adres: ${this.address}`);
     }
