@@ -36,7 +36,7 @@ class BasicUser extends User {
 
     // Metoda wykorzystująca metody z klasy bazowej
     getUserData() {
-        this.logUserData();
+        this.calculateAgeInMonths();
         this.checkAge();
         this.displayFullInfo();
     }
@@ -49,7 +49,7 @@ class CartUser extends User {
 
     // Metoda wykorzystująca metody z klasy bazowej
     getUserData() {
-        this.logUserData();
+        this.calculateAgeInMonths();
         this.checkAge();
         this.displayFullInfo();
     }
