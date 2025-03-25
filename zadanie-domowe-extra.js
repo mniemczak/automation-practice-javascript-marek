@@ -1,3 +1,5 @@
+//Zadanie 1.1
+
 class User{
     constructor(name, phoneNumber, email, age, address){
         this.name = name;
@@ -60,3 +62,36 @@ basicUser.getUserData();
 
 const cartUser = new CartUser();
 cartUser.getUserData();
+
+/Zadanie 1.2
+
+// Tworzenie obiektu 'library'
+const library = {
+    book1: {
+        Tytuł: ['Władca Pierścieni'],
+        Autor: ['J.R.R. Tolkien'],
+        'Data wydania': ['29 lipca 1954'],
+        'Ilość stron': ['1178']
+    },
+    book2: {
+        Tytuł: ['Harry Potter i Kamień Filozoficzny'],
+        Autor: ['J.K. Rowling'],
+        'Data wydania': ['26 czerwca 1997'],
+        'Ilość stron': ['223']
+    },
+    book3: {
+        Tytuł: ['Zbrodnia i kara'],
+        Autor: ['Fiodor Dostojewski'],
+        'Data wydania': ['1866'],
+        'Ilość stron': ['671']
+    }
+};
+
+for (const bookKey in library) {
+    console.log(`Książka: ${bookKey}`);
+    console.log(`Tytuł: ${library[bookKey].Tytuł[0]}`);
+    console.log(`Autor: ${library[bookKey].Autor[0]}`);
+    console.log(`Data wydania: ${library[bookKey]['Data wydania'][0]}`);
+    console.log(`Ilość stron: ${library[bookKey]['Ilość stron'][0]}`);
+    console.log('');
+}
