@@ -28,7 +28,7 @@ class User{
 
 class BasicUser extends User {
     constructor() {
-        super("Jan Kowalski", "123456789", "jan@example.com", 25, "Warszawa");
+        super("Jan Kowalski", "123456789", "jan@gmail.com", 25, "Warszawa");
     }
 
     // Metoda wykorzystująca metody z klasy bazowej
@@ -41,7 +41,7 @@ class BasicUser extends User {
 
 class CartUser extends User {
     constructor() {
-        super("Anna Nowak", "987654321", "anna@example.com", 30, "Kraków");
+        super("Anna Nowak", "987654321", "anna@gmail.com", 30, "Kraków");
     }
 
     // Metoda wykorzystująca metody z klasy bazowej
